@@ -3,16 +3,39 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Heart, Share2 } from "lucide-react";
-
-const allProducts = [
-  { id: 1, name: "Air Force Classic White", price: "$120", image: "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=800&h=800&fit=crop", category: "Men's Shoes", description: "Timeless design meets modern comfort. Perfect for everyday wear." },
-  { id: 2, name: "Jordan Retro High", price: "$180", image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&h=800&fit=crop", category: "Men's Shoes", description: "Iconic basketball heritage in a premium high-top silhouette." },
-  { id: 3, name: "Ultra Boost Runner", price: "$150", image: "https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=800&h=800&fit=crop", category: "Women's Shoes", description: "Energy-returning cushioning for your best run yet." },
-];
+import { getProductById } from "@/data/products";
+import { useCart } from "@/contexts/CartContext";
+import { useState } from "react";
 
 const ProductDetail = () => {
   const { id } = useParams();
-  const product = allProducts.find(p => p.id === Number(id)) || allProducts[0];
+  const product = getProductById(Number(id));
+  const { addToCart } = useCart();
+  const [selectedSize, setSelectedSize] = useState<string>("9");
+
+  if (!product) {
+    return (
+      <div className="min-h-screen flex flex-col">
+        <Navbar />
+        <main className="flex-1 py-12">
+          <div className="container text-center">
+            <h1 className="text-4xl font-bold mb-4">Product Not Found</h1>
+            <Link to="/">
+              <Button>
+                <ArrowLeft className="mr-2 h-4 w-4" />
+                Back to Shop
+              </Button>
+            </Link>
+          </div>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
+
+  const handleAddToCart = () => {
+    addToCart(product, selectedSize);
+  };
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -50,7 +73,13 @@ const ProductDetail = () => {
                   <label className="block text-sm font-medium mb-2">Size</label>
                   <div className="grid grid-cols-5 gap-2">
                     {['7', '8', '9', '10', '11'].map((size) => (
-                      <Button key={size} variant="outline" className="w-full">
+                      <Button 
+                        key={size} 
+                        variant={selectedSize === size ? "default" : "outline"} 
+                        className="w-full"
+                        onClick={() => setSelectedSize(size)}
+                        data-testid={`button-size-${size}`}
+                      >
                         {size}
                       </Button>
                     ))}
@@ -58,13 +87,18 @@ const ProductDetail = () => {
                 </div>
 
                 <div className="flex gap-4">
-                  <Button size="lg" className="flex-1 bg-accent hover:bg-accent/90">
+                  <Button 
+                    size="lg" 
+                    className="flex-1 bg-accent hover:bg-accent/90"
+                    onClick={handleAddToCart}
+                    data-testid="button-add-to-cart-detail"
+                  >
                     Add to Cart
                   </Button>
-                  <Button size="lg" variant="outline">
+                  <Button size="lg" variant="outline" data-testid="button-favorite">
                     <Heart className="h-5 w-5" />
                   </Button>
-                  <Button size="lg" variant="outline">
+                  <Button size="lg" variant="outline" data-testid="button-share">
                     <Share2 className="h-5 w-5" />
                   </Button>
                 </div>

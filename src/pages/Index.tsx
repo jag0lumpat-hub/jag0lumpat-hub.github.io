@@ -4,15 +4,9 @@ import { ProductCard } from "@/components/ProductCard";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Gift, Sparkles, TrendingUp } from "lucide-react";
 import { Link } from "react-router-dom";
+import { getFeaturedProducts } from "@/data/products";
 
-const featuredProducts = [
-  { id: 1, name: "Air Force Classic White", price: "$120", image: "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=800&h=800&fit=crop", category: "Men's Shoes" },
-  { id: 2, name: "Jordan Retro High", price: "$180", image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&h=800&fit=crop", category: "Men's Shoes" },
-  { id: 3, name: "Ultra Boost Runner", price: "$150", image: "https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=800&h=800&fit=crop", category: "Women's Shoes" },
-  { id: 4, name: "Kids Air Max Pro", price: "$90", image: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=800&h=800&fit=crop", category: "Kids' Shoes" },
-  { id: 5, name: "Street Style Low", price: "$110", image: "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=800&h=800&fit=crop", category: "Men's Shoes" },
-  { id: 6, name: "Performance Training", price: "$130", image: "https://images.unsplash.com/photo-1605348532760-6753d2c43329?w=800&h=800&fit=crop", category: "Women's Shoes" },
-];
+const featuredProducts = getFeaturedProducts();
 
 const giftCategories = [
   { title: "For Him", icon: TrendingUp, link: "/mens", description: "Trending styles" },

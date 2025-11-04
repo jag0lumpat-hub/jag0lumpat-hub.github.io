@@ -1,15 +1,9 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ProductCard } from "@/components/ProductCard";
+import { getKidsProducts } from "@/data/products";
 
-const kidsProducts = [
-  { id: 4, name: "Kids Air Max Pro", price: "$90", image: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=800&h=800&fit=crop", category: "Kids' Shoes" },
-  { id: 19, name: "Junior Running Star", price: "$75", image: "https://images.unsplash.com/photo-1514989940723-e8e51635b782?w=800&h=800&fit=crop", category: "Kids' Shoes" },
-  { id: 20, name: "Youth Sport Classic", price: "$80", image: "https://images.unsplash.com/photo-1539185441755-769473a23570?w=800&h=800&fit=crop", category: "Kids' Shoes" },
-  { id: 21, name: "Kids Comfort Walker", price: "$65", image: "https://images.unsplash.com/photo-1587563871167-1ee9c731aefb?w=800&h=800&fit=crop", category: "Kids' Shoes" },
-  { id: 22, name: "Junior Street Style", price: "$70", image: "https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=800&h=800&fit=crop", category: "Kids' Shoes" },
-  { id: 23, name: "Youth Performance", price: "$85", image: "https://images.unsplash.com/photo-1627225924765-552d49cf47ad?w=800&h=800&fit=crop", category: "Kids' Shoes" },
-];
+const kidsProducts = getKidsProducts();
 
 const Kids = () => {
   return (

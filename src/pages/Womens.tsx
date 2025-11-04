@@ -1,17 +1,9 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ProductCard } from "@/components/ProductCard";
+import { getWomensProducts } from "@/data/products";
 
-const womensProducts = [
-  { id: 3, name: "Ultra Boost Runner", price: "$150", image: "https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=800&h=800&fit=crop", category: "Women's Shoes" },
-  { id: 6, name: "Performance Training", price: "$130", image: "https://images.unsplash.com/photo-1605348532760-6753d2c43329?w=800&h=800&fit=crop", category: "Women's Shoes" },
-  { id: 13, name: "Classic White Low", price: "$115", image: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=800&h=800&fit=crop", category: "Women's Shoes" },
-  { id: 14, name: "Fashion Sport Hybrid", price: "$145", image: "https://images.unsplash.com/photo-1584735175315-9d5df23860e6?w=800&h=800&fit=crop", category: "Women's Shoes" },
-  { id: 15, name: "Lifestyle Comfort Plus", price: "$105", image: "https://images.unsplash.com/photo-1603808033192-082d6919d3e1?w=800&h=800&fit=crop", category: "Women's Shoes" },
-  { id: 16, name: "Running Cloud Elite", price: "$155", image: "https://images.unsplash.com/photo-1612902376937-0d9e1755fe9f?w=800&h=800&fit=crop", category: "Women's Shoes" },
-  { id: 17, name: "Urban Chic Sneaker", price: "$125", image: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=800&h=800&fit=crop", category: "Women's Shoes" },
-  { id: 18, name: "Athletic Performance", price: "$140", image: "https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?w=800&h=800&fit=crop", category: "Women's Shoes" },
-];
+const womensProducts = getWomensProducts();
 
 const Womens = () => {
   return (
