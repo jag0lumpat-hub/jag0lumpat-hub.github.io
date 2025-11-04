@@ -98,10 +98,18 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
 
+### November 4, 2025 - Product Inventory Expansion
+- **Expanded product catalog to 30 items:**
+  - Men's Collection: 10 products ($85-$200)
+  - Women's Collection: 10 products ($105-$160)
+  - Kids' Collection: 10 products ($55-$95)
+  - All products include detailed Indonesian descriptions
+  - Diverse product range including sneakers, formal shoes, athletic wear, and specialty items
+
 ### November 4, 2025 - Shopping Cart Implementation
 - **Implemented comprehensive shopping cart functionality:**
   - Created `CartContext` for global cart state management with localStorage persistence
-  - Added detailed product descriptions (in Indonesian) for all 23 products in `src/data/products.ts`
+  - Added detailed product descriptions (in Indonesian) for all products in `src/data/products.ts`
   - Updated `ProductCard` component to display descriptions and functional "Add to Cart" button
   - Built complete Cart page (`/cart`) with:
     - Item quantity management (increase/decrease)

@@ -185,6 +185,62 @@ export const allProducts: Product[] = [
     category: "Kids' Shoes",
     description: "Performance shoe untuk young athletes. Support yang dibutuhkan untuk sports activities. Growing feet friendly dengan room for growth."
   },
+  { 
+    id: 24, 
+    name: "Premium Leather Derby", 
+    price: "$175", 
+    image: "https://images.unsplash.com/photo-1533867617858-e7b97e060509?w=800&h=800&fit=crop", 
+    category: "Men's Shoes",
+    description: "Sepatu formal premium dengan kulit asli berkualitas tinggi. Desain derby klasik yang timeless untuk acara formal dan semi-formal. Craftmanship detail dengan jahitan presisi dan finishing sempurna."
+  },
+  { 
+    id: 25, 
+    name: "Athletic Slip-On Pro", 
+    price: "$135", 
+    image: "https://images.unsplash.com/photo-1560343090-f0409e92791a?w=800&h=800&fit=crop", 
+    category: "Women's Shoes",
+    description: "Slip-on modern dengan support athletic. Easy on-off tanpa mengorbankan performa. Breathable knit upper dengan cushioning responsif untuk aktivitas sepanjang hari."
+  },
+  { 
+    id: 26, 
+    name: "Fashion Platform Sneaker", 
+    price: "$160", 
+    image: "https://images.unsplash.com/photo-1603808033192-082d6919d3e1?w=800&h=800&fit=crop", 
+    category: "Women's Shoes",
+    description: "Platform sneaker dengan elevated style. Menambah tinggi tanpa mengorbankan kenyamanan. Trendy design yang perfect untuk street fashion dan casual outfits."
+  },
+  { 
+    id: 27, 
+    name: "Toddler First Steps", 
+    price: "$55", 
+    image: "https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?w=800&h=800&fit=crop", 
+    category: "Kids' Shoes",
+    description: "Sepatu khusus untuk balita yang baru belajar berjalan. Ultra soft sole mendukung perkembangan natural kaki. Lightweight dan flexible dengan grip pattern yang aman."
+  },
+  { 
+    id: 28, 
+    name: "Kids Adventure Trail", 
+    price: "$78", 
+    image: "https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?w=800&h=800&fit=crop", 
+    category: "Kids' Shoes",
+    description: "Sepatu outdoor untuk petualangan anak. Water-resistant upper dengan traction sole. Durable construction tahan aktivitas outdoor dan bermain di berbagai terrain."
+  },
+  { 
+    id: 29, 
+    name: "Junior Basketball High", 
+    price: "$95", 
+    image: "https://images.unsplash.com/photo-1542219550-37153d387c27?w=800&h=800&fit=crop", 
+    category: "Kids' Shoes",
+    description: "Sepatu basket junior dengan ankle support. Cushioning responsive untuk jumping dan landing. Traction pattern khusus untuk court grip yang optimal."
+  },
+  { 
+    id: 30, 
+    name: "Youth Skateboard Pro", 
+    price: "$88", 
+    image: "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=800&h=800&fit=crop", 
+    category: "Kids' Shoes",
+    description: "Sepatu skate untuk remaja dengan reinforced ollie area. Padded collar untuk ankle comfort. Vulcanized sole memberikan board feel yang excellent dan durability maksimal."
+  },
 ];
 
 export const getFeaturedProducts = () => allProducts.slice(0, 6);
